@@ -7,17 +7,18 @@ accordance with the terms of the accompanying license agreement.
 */
 package feathers.skins
 {
+	import flash.utils.Dictionary;
+
 	import feathers.display.Scale3Image;
 	import feathers.display.Scale9Image;
 	import feathers.textures.Scale3Textures;
 	import feathers.textures.Scale9Textures;
 
-	import flash.utils.Dictionary;
-
 	import starling.display.DisplayObject;
 	import starling.display.Image;
 	import starling.display.Quad;
 	import starling.textures.ConcreteTexture;
+	import starling.textures.RenderTexture;
 	import starling.textures.SubTexture;
 	import starling.textures.Texture;
 
@@ -125,6 +126,7 @@ package feathers.skins
 			this.setValueTypeHandler(Texture, textureValueTypeHandler);
 			this.setValueTypeHandler(ConcreteTexture, textureValueTypeHandler);
 			this.setValueTypeHandler(SubTexture, textureValueTypeHandler);
+			this.setValueTypeHandler(RenderTexture, textureValueTypeHandler);
 			this.setValueTypeHandler(Scale9Textures, scale9TextureValueTypeHandler);
 			this.setValueTypeHandler(Scale3Textures, scale3TextureValueTypeHandler);
 			//the constructor property of a uint is actually Number.
@@ -251,3 +253,5 @@ package feathers.skins
 		}
 	}
 }
+
+
